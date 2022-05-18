@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>New restaurant</h1>
+  <%= simple_form_for [@restaurant] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :category, :collection => %w[chinese italian japanese french belgian] %>
+    <%= f.submit "Add restaurant", class: "btn btn-primary" %>
+  <% end %>
+</div>
